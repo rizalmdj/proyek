@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_tree_marketplace_order" model="ir.ui.view">
+        <field name="name">Order</field>
+        <field name="model">marketplace.order</field>
+        <field name="arch" type="xml">
+            <tree string="POS Orders" decoration-info="state == 'draft'" decoration-muted="state in ('done','cancel')" create="0">
+                <field name="no_invoice" string="Nomor Invoice"/>
+                <field name="customer" string="Customer"/>
+                <field name="tgl_pesan" string="Tanggal Pesan"/>
+                <field name="market" string="Marketplace"/>
+                <field name="total" widget="monetary" string="Total"/>
+                <field name="state" string="Status"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
